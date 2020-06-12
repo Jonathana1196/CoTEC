@@ -13,6 +13,12 @@ VALUES
 (201345678, 'Jose', 'Jarquin', 35, 'Nicaraguense', 'joseja@gmail.com', 505, 2),
 (301245678, 'Raldall', 'Vazquez', 21, 'Costarricense', 'randallvaz@gamil.com', 506, 1);
 
+INSERT INTO ESTADO(Descripcion)
+VALUES
+('Activa - Contagiada'),
+('Recuperada'),
+('Muerta');
+
 INSERT INTO HOSPITAL(Nombre, Director, Capacidad, Contacto, CamasUCI, Region)
 VALUES
 ('San Juan de Dios', 'Daniel', 50, '12345678', 25, 506),
@@ -21,9 +27,53 @@ VALUES
 ('San Rafael', 'Juan', 40, '21345678', 20, 506),
 ('Max Peralta', 'Randall', 30, '32198765', 15, 506);
 
+INSERT INTO MEDICACION(Nombre, CasaFarmaceutica, Paciente)
+VALUES
+('Python', 'Norton', 1),
+('Java', 'McAffe', 1),
+('C++', 'Avast', 2),
+('Scheme', 'AVG', 3),
+('Prolog', 'Bullguard', 2),
+('JavaScript', 'Heimdal', 5),
+('Rust', 'BitDefender', 2),
+('Asembly', 'Panda', 1),
+('PHP', 'Kaspersky', 2),
+('Swift', 'Webroot', 5);
+
+--INSERT INTO MEDIDASANITARIA(Nombre, Descripcion, FechaInicio, FechaFinal, Region)
+--VALUES
+--(),
+--(),
+--(),
+--(),
+--();
+
 INSERT INTO PACIENTE(Cedula, Nombre, Apellido, Edad, Nacionalidad, Internado, UCI, Region, Estado)
 VALUES
 (21346587, 'Abner', 'Lacayo', 25, 'Costarricense', 'Si', 'No', 506, 2),
 (98756443, 'Alejandro', 'Salazar', 26, 'Costarricense', 'No', 'No', 506, 5),
 (68548954, 'Brian', 'Lacayo', 27, 'Costarricense', 'No', 'No', 506, 1),
 (45897564, 'Thalia', 'Arias', 28, 'Costarricense', 'No', 'No', 506, 5);
+
+INSERT INTO PATOLOGIA(Nombre, Descripcion, Sintomas, Tratamiento, Paciente)
+VALUES
+('Signal and Systems', 'Barboza', 'Fatiga Extrema', 'Tutorias', 3),
+('Datos I', 'Nereo', 'Insomnio', 'Stack Overflow', 2),
+('Datos II', 'Noguera', 'Jaqueca', 'Stack Overflow', 2),
+('CA', 'Barboza', 'Fatiga', 'Tutorias', 3),
+('Discretos', 'Rivas', 'Confusion', 'El Rivas PDF', 5);
+
+INSERT INTO REGION(Pais, Estado)
+VALUES
+('Estados Unidos', 'New York'),
+('Mexico', 'DF'),
+('Rumania', 'Bucarest'),
+('Espana', 'Madrid'),
+('Uruguay', 'Montevideo'),
+('Rusia', 'Moscu'),
+('Ucrania', 'Kiev'),
+('Islandia', 'Reykjavik'),
+('Alemania', 'Berlin'),
+('Italia', 'Roma'),
+('Nicaragua', 'Managua'),
+('Costa Rica', 'San Jose');

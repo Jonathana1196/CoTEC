@@ -8,7 +8,7 @@ using CoTEC_API.Models;
 namespace CoTEC_API.Controllers
 {
     [Produces("application/json")]
-    [Route("Estados")]
+    [Route("CoTEC/Estados")]
     public class EstadoController : Controller
     {
         private readonly ApplicationDbContext context;

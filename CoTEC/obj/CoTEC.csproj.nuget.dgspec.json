@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jonat\\Documents\\Bases\\Proyectos\\CoTEC\\CoTEC_API\\CoTEC_API\\CoTEC_API.csproj": {}
+    "C:\\Users\\jonat\\Documents\\Bases\\Proyectos\\CoTEC\\CoTEC\\CoTEC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jonat\\Documents\\Bases\\Proyectos\\CoTEC\\CoTEC_API\\CoTEC_API\\CoTEC_API.csproj": {
+    "C:\\Users\\jonat\\Documents\\Bases\\Proyectos\\CoTEC\\CoTEC\\CoTEC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jonat\\Documents\\Bases\\Proyectos\\CoTEC\\CoTEC_API\\CoTEC_API\\CoTEC_API.csproj",
-        "projectName": "CoTEC_API",
-        "projectPath": "C:\\Users\\jonat\\Documents\\Bases\\Proyectos\\CoTEC\\CoTEC_API\\CoTEC_API\\CoTEC_API.csproj",
+        "projectUniqueName": "C:\\Users\\jonat\\Documents\\Bases\\Proyectos\\CoTEC\\CoTEC\\CoTEC.csproj",
+        "projectName": "CoTEC",
+        "projectPath": "C:\\Users\\jonat\\Documents\\Bases\\Proyectos\\CoTEC\\CoTEC\\CoTEC.csproj",
         "packagesPath": "C:\\Users\\jonat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jonat\\Documents\\Bases\\Proyectos\\CoTEC\\CoTEC_API\\CoTEC_API\\obj\\",
+        "outputPath": "C:\\Users\\jonat\\Documents\\Bases\\Proyectos\\CoTEC\\CoTEC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jonat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,20 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "dependencies": {
-            "Microsoft.AspNetCore.Cors": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.0-preview.5.20278.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.InMemory": {
-              "target": "Package",
-              "version": "[5.0.0-preview.5.20278.2, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

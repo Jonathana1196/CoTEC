@@ -6,10 +6,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using CoTEC_API.Models;
+
 
 namespace CoTEC_API
 {
@@ -25,6 +28,7 @@ namespace CoTEC_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("CoTEC"));
             services.AddControllers();
         }
 
@@ -35,6 +39,11 @@ namespace CoTEC_API
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors(options =>
+                options.WithOrigins("http://127.0.0.1:4200")
+                    .AllowAnyMethod()
+                    .AllowCredentials()
+                    .AllowAnyHeader());
 
             app.UseHttpsRedirection();
 

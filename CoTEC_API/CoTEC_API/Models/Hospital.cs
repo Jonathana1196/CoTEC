@@ -1,4 +1,4 @@
-﻿namespace CoTEC_API.Models
+﻿﻿namespace CoTEC_API.Models
 {
     public class Hospital
     {

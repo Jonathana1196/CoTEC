@@ -9,8 +9,6 @@ namespace CoTEC_API.Models
         {
 
         }
-
-        public DbSet<Contacto> Contactos { get; set; }
         public DbSet<Estado> Estados { get; set; }
         public DbSet<Hospital> Hospitales { get; set; }
         public DbSet<Medicacion> Medicaciones { get; set; }

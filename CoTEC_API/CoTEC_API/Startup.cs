@@ -29,6 +29,7 @@ namespace CoTEC_API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("CoTEC"));
+            
             services.AddControllers();
         }
 

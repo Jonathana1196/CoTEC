@@ -1,3 +1,11 @@
+-- #######################################################
+--                          CoTEC
+-- #######################################################
+
+-- =======================================================
+-- Descripcion: Creacion de la tabla PACIENTE y los 
+-- atributos que la compone y su tipo de dato.
+-- =======================================================
 CREATE TABLE PACIENTE (
 	Cedula INT NOT NULL,
 	Nombre VARCHAR(15) NOT NULL,
@@ -11,12 +19,20 @@ CREATE TABLE PACIENTE (
 	PRIMARY KEY (Cedula)
 );
 
+-- =======================================================
+-- Descripcion: Creacion de la tabla ESTADO y asignacion 
+-- de los atributos que la componen y su tipo de dato.
+-- =======================================================
 CREATE TABLE ESTADO (
 	Id INT NOT NULL IDENTITY(1,1),
 	Descripcion VARCHAR(25),
 	PRIMARY KEY (Id)
 );
 
+-- =======================================================
+-- Descripcion:  Creacion de la tabla MEDICACOIN y asigna_ 
+-- cion de los atributos que la componen y su tipo de dato.
+-- =======================================================
 CREATE TABLE MEDICACION (
 	Id INT NOT NULL IDENTITY(1,1),
 	Nombre VARCHAR(50) NOT NULL,
@@ -25,6 +41,10 @@ CREATE TABLE MEDICACION (
 	PRIMARY KEY (Id)
 );
 
+-- =======================================================
+-- Descripcion: Creacion de la tabla REGION y asignacion 
+-- de los atributos que la componen y su tipo de dato.
+-- =======================================================
 CREATE TABLE REGION(
 	Id INT NOT NULL IDENTITY(1,1),
 	Pais VARCHAR(30) NOT NULL,
@@ -32,7 +52,11 @@ CREATE TABLE REGION(
 	PRIMARY KEY (Id)
 );
 
-
+-- =======================================================
+-- Descripcion: Creacion de la tabla MEDIDASANITARIA y 
+-- asignacion de los atributos que la componen y su tipo
+-- de dato.
+-- =======================================================
 CREATE TABLE MEDIDASANITARIA(
 	Id INT NOT NULL IDENTITY(1,1),
 	Nombre VARCHAR(30) NOT NULL,
@@ -43,6 +67,10 @@ CREATE TABLE MEDIDASANITARIA(
 	PRIMARY KEY (Id)
 );
 
+-- =======================================================
+-- Descripcion: Creacion de la tabla HOSPITAL y asignacion 
+-- de los atributos que la componen y su tipo de dato.
+-- =======================================================
 CREATE TABLE HOSPITAL(
 	Id INT NOT NULL IDENTITY(1,1),
 	Nombre VARCHAR(30) NOT NULL,
@@ -54,6 +82,10 @@ CREATE TABLE HOSPITAL(
 	PRIMARY KEY (Id)
 );
 
+-- =======================================================
+-- Descripcion: Creacion de la tabla CONTACTO y asignacion 
+-- de los atributos que la componen y su tipo de dato.
+-- =======================================================
 CREATE TABLE CONTACTO(
 	Cedula INT NOT NULL,
 	Nombre VARCHAR(15) NOT NULL,
@@ -67,6 +99,10 @@ CREATE TABLE CONTACTO(
 
 );
 
+-- =======================================================
+-- Descripcion: Creacion de la tabla PATOLOGIA y asignacion 
+-- de los atributos que la componen y su tipo de dato.
+-- =======================================================
 CREATE TABLE PATOLOGIA(
 	Id INT NOT NULL IDENTITY(1,1),
 	Nombre VARCHAR(40) NOT NULL,

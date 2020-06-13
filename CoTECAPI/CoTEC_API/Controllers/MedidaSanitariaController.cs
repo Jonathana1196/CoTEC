@@ -25,7 +25,7 @@ namespace CoTECAPI.Controllers
         // la base de datos.
         public IEnumerable<MedidaSanitaria> GetMedidas()
         {
-            return context.Medidas.ToList();
+            return context.MEDIDASANITARIA.ToList();
         }
 
         [HttpPost]
@@ -34,7 +34,7 @@ namespace CoTECAPI.Controllers
         {
             if (ModelState.IsValid)
             {
-                context.Medidas.Add(medida);
+                context.MEDIDASANITARIA.Add(medida);
                 context.SaveChanges();
             }
             return BadRequest(ModelState);
@@ -58,13 +58,13 @@ namespace CoTECAPI.Controllers
         // Metodo que se encarga de eliminar una medida sanitaria de la base de datos.
         public IActionResult DeleteMedidaSanitaria(int id)
         {
-            var medida = context.Medidas.FirstOrDefault(x => x.Id == id);
+            var medida = context.MEDIDASANITARIA.FirstOrDefault(x => x.Id == id);
             if (medida == null)
             {
                 return BadRequest();
             }
 
-            context.Medidas.Remove(medida);
+            context.MEDIDASANITARIA.Remove(medida);
             context.SaveChanges();
             return Ok(medida);
         }

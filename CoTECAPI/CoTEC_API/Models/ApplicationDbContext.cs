@@ -9,14 +9,15 @@ namespace CoTECAPI.Models
         {
 
         }
-        public DbSet<Estado> Estados { get; set; }
-        public DbSet<Hospital> Hospitales { get; set; }
-        public DbSet<Medicacion> Medicaciones { get; set; }
-        public DbSet<MedidaSanitaria> Medidas { get; set; }
-        public DbSet<Paciente> Pacientes { get; set; }
-        public DbSet<Contacto> Contactos { get; set; }
-        public DbSet<Patologia> Patologias { get; set; }
-        public DbSet<Region> Regiones { get; set; }
+        public DbSet<Estado> ESTADO { get; set; }
+        
+        public DbSet<Hospital> HOSPITAL { get; set; }
+        public DbSet<Medicacion> MEDICACION { get; set; }
+        public DbSet<MedidaSanitaria> MEDIDASANITARIA { get; set; }
+        public DbSet<Paciente> PACIENTE { get; set; }
+        public DbSet<Contacto> CONTACTO { get; set; }
+        public DbSet<Patologia> PATOLOGIA { get; set; }
+        public DbSet<Region> REGION { get; set; }
         
     }
 }

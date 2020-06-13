@@ -25,7 +25,7 @@ namespace CoTECAPI.Controllers
         // la base de datos.
         public IEnumerable<Medicacion> GetMedicaciones()
         {
-            return context.Medicaciones.ToList();
+            return context.MEDICACION.ToList();
         }
 
         [HttpPost]
@@ -34,7 +34,7 @@ namespace CoTECAPI.Controllers
         {
             if (ModelState.IsValid)
             {
-                context.Medicaciones.Add(medicacion);
+                context.MEDICACION.Add(medicacion);
                 context.SaveChanges();
             }
             return BadRequest(ModelState);
@@ -58,13 +58,13 @@ namespace CoTECAPI.Controllers
         // Metodo que se encarga de eliminar un contacto de la base de datos.
         public IActionResult DeleteMedicacion(int id)
         {
-            var medicacion = context.Medicaciones.FirstOrDefault(x => x.Id == id);
+            var medicacion = context.MEDICACION.FirstOrDefault(x => x.Id == id);
             if (medicacion == null)
             {
                 return BadRequest();
             }
 
-            context.Medicaciones.Remove(medicacion);
+            context.MEDICACION.Remove(medicacion);
             context.SaveChanges();
             return Ok(medicacion);
         }

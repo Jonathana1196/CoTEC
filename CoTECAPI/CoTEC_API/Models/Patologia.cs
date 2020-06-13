@@ -10,7 +10,7 @@ namespace CoTECAPI.Models
         public string Descripcion { get; set; }
         public string Sintomas { get; set; }
         public string Tratamiento { get; set; }
-        public int Paciente { get; set; }
-        public int Contacto { get; set; }
+        public int? Paciente { get; set; }
+        public int? Contacto { get; set; }
     }
 }

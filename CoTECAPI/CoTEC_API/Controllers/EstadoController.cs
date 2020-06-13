@@ -19,7 +19,7 @@ namespace CoTECAPI.Controllers
         [HttpGet]
         public IEnumerable<Estado> GetEstados()
         {
-            return context.Estados.ToList();
+            return context.ESTADO.ToList();
         }
 
         [HttpPost]
@@ -27,7 +27,7 @@ namespace CoTECAPI.Controllers
         {
             if (ModelState.IsValid)
             {
-                context.Estados.Add(estado);
+                context.ESTADO.Add(estado);
                 context.SaveChanges();
             }
             return BadRequest(ModelState);
@@ -49,13 +49,13 @@ namespace CoTECAPI.Controllers
         [HttpDelete("{id}")]
         public  IActionResult DeleteEstado(int id)
         {
-            var estado = context.Estados.FirstOrDefault(x => x.Id == id);
+            var estado = context.ESTADO.FirstOrDefault(x => x.Id == id);
             if (estado==null)
             {
                 return BadRequest();
             }
 
-            context.Estados.Remove(estado);
+            context.ESTADO.Remove(estado);
             context.SaveChanges();
             return Ok(estado);
         }       

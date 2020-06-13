@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Dario\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Dario\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_CoTEC_API.-234410935.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Dario\Documents\GitHub\CoTEC\CoTEC_API" t="IncludeFlat">
+      <e p="CoTEC_API" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="ContactoController.cs" t="Include" />
+          <e p="EstadoController.cs" t="Include" />
+          <e p="HospitalController.cs" t="Include" />
+          <e p="MedicacionController.cs" t="Include" />
+          <e p="MedidasController.cs" t="Include" />
+          <e p="PacienteController.cs" t="Include" />
+          <e p="PatologiaController.cs" t="Include" />
+          <e p="RegionController.cs" t="Include" />
+        </e>
+        <e p="CoTEC_API.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="ApplicationDbContext.cs" t="Include" />
+          <e p="Contacto.cs" t="Include" />
+          <e p="Estado.cs" t="Include" />
+          <e p="Hospital.cs" t="Include" />
+          <e p="Medicacion.cs" t="Include" />
+          <e p="Medida_Sanitaria.cs" t="Include" />
+          <e p="Paciente.cs" t="Include" />
+          <e p="Patologia.cs" t="Include" />
+          <e p="Region.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="CoTEC_API.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="CoTEC_API.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

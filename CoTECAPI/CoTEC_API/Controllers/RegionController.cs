@@ -26,7 +26,7 @@ namespace CoTECAPI.Controllers
         // la base de datos.
         public IEnumerable<Region> GetRegiones()
         {
-            return context.Regiones.ToList();
+            return context.REGION.ToList();
         }
         
         [HttpPost]
@@ -35,7 +35,7 @@ namespace CoTECAPI.Controllers
         {
             if (ModelState.IsValid)
             {
-                context.Regiones.Add(region);
+                context.REGION.Add(region);
                 context.SaveChanges();
             }
             return BadRequest(ModelState);
@@ -59,13 +59,13 @@ namespace CoTECAPI.Controllers
         // Metodo que se encarga de eliminar una region de la base de datos.
         public IActionResult DeleteRegion(int id)
         {
-            var region = context.Regiones.FirstOrDefault(x => x.Id == id);
+            var region = context.REGION.FirstOrDefault(x => x.Id == id);
             if (region == null)
             {
                 return BadRequest();
             }
 
-            context.Regiones.Remove(region);
+            context.REGION.Remove(region);
             context.SaveChanges();
             return Ok(region);
         }

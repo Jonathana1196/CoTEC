@@ -23,7 +23,7 @@ namespace CoTECAPI.Controllers
         // la base de datos.
         public IEnumerable<Paciente> GetPacientes()
         {
-            return context.Pacientes.ToList();
+            return context.PACIENTE.ToList();
         }
 
         [HttpPost]
@@ -32,7 +32,7 @@ namespace CoTECAPI.Controllers
         {
             if (ModelState.IsValid)
             {
-                context.Pacientes.Add(paciente);
+                context.PACIENTE.Add(paciente);
                 context.SaveChanges();
             }
             return BadRequest(ModelState);
@@ -56,13 +56,13 @@ namespace CoTECAPI.Controllers
         // Metodo que se encarga de eliminar un paciente de la base de datos.
         public IActionResult DeletePaciente(int cedula)
         {
-            var paciente = context.Pacientes.FirstOrDefault(x => x.Cedula == cedula);
+            var paciente = context.PACIENTE.FirstOrDefault(x => x.Cedula == cedula);
             if (paciente == null)
             {
                 return BadRequest();
             }
 
-            context.Pacientes.Remove(paciente);
+            context.PACIENTE.Remove(paciente);
             context.SaveChanges();
             return Ok(paciente);
         }

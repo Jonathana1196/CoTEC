@@ -26,7 +26,7 @@ namespace CoTECAPI.Controllers
         // la base de datos.
         public IEnumerable<Patologia> GetPatologias()
         {
-            return context.Patologias.ToList();
+            return context.PATOLOGIA.ToList();
         }
 
         [HttpPost]
@@ -35,7 +35,7 @@ namespace CoTECAPI.Controllers
         {
             if (ModelState.IsValid)
             {
-                context.Patologias.Add(patologia);
+                context.PATOLOGIA.Add(patologia);
                 context.SaveChanges();
             }
             return BadRequest(ModelState);
@@ -59,13 +59,13 @@ namespace CoTECAPI.Controllers
         // Metodo que se encarga de eliminar una region de la base de datos.
         public IActionResult DeletePatologia(int id)
         {
-            var patologia = context.Patologias.FirstOrDefault(x => x.Id == id);
+            var patologia = context.PATOLOGIA.FirstOrDefault(x => x.Id == id);
             if (patologia == null)
             {
                 return BadRequest();
             }
 
-            context.Patologias.Remove(patologia);
+            context.PATOLOGIA.Remove(patologia);
             context.SaveChanges();
             return Ok(patologia);
         }

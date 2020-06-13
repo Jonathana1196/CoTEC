@@ -34,7 +34,7 @@ namespace CoTEC_API.Controllers
         }
         
         [HttpPut("{id}")]
-        public  IActionResult PutEstado([FromBody]Estado estado, string id)
+        public  IActionResult PutEstado([FromBody]Estado estado, int id)
         {
             if (estado.Id != id)
             {
@@ -47,7 +47,7 @@ namespace CoTEC_API.Controllers
         }
         
         [HttpDelete("{id}")]
-        public  IActionResult DeleteEstado(string id)
+        public  IActionResult DeleteEstado(int id)
         {
             var estado = context.Estados.FirstOrDefault(x => x.Id == id);
             if (estado==null)
@@ -58,21 +58,6 @@ namespace CoTEC_API.Controllers
             context.Estados.Remove(estado);
             context.SaveChanges();
             return Ok(estado);
-        }
-
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        }       
     }
 }

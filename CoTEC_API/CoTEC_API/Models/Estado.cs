@@ -7,7 +7,7 @@ namespace CoTEC_API.Models
     {
         
         [Key]
-        public string Id { get; set; }
+        public int Id { get; set; }
         
         public string Descripcion { get; set; }
         

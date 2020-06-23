@@ -31,7 +31,7 @@ async onLogout() {
       await this.authSvc.logout();
       this.router.navigate(['/Home']);
     } catch (error) {
-      console.log("Error aqui asifdhsalkdjvfnas;dhvgsaiufgbaso;fihapsoufghsaifhsuigfsofb");
+      console.log('Error aqui asifdhsalkdjvfnas;dhvgsaiufgbaso;fihapsoufghsaifhsuigfsofb');
       console.log(error);
     }
   }

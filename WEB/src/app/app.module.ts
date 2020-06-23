@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
-import { BankAccountComponent } from './bank-account/bank-account.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { RolesComponent } from './Administrador/roles/roles.component';
@@ -22,8 +21,6 @@ import { PaquetesComponent } from './Bodeguero/paquetes/paquetes.component';
 import { RastreoComponent } from './Bodeguero/rastreo/rastreo.component';
 import { NavbarComponent } from './Bodeguero/navbar/navbar.component';
 import { TecboxbComponent } from './Bodeguero/tecboxb/tecboxb.component';
-import { MovilviewComponent } from './Movil/movilview/movilview.component';
-import{ DeviceDetectorModule } from 'ngx-device-detector';
 import { NavbarhComponent } from './shared/navbarh/navbarh.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -34,7 +31,6 @@ import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
-    BankAccountComponent,
     NavbaraComponent,
     RolesComponent,
     SucursalesComponent,
@@ -52,7 +48,6 @@ import { environment } from 'src/environments/environment';
     RastreoComponent,
     NavbarComponent,
     TecboxbComponent,
-    MovilviewComponent,
     NavbarhComponent,
     HomeComponent,
     LoginComponent,
@@ -66,7 +61,6 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule,
     AngularFireModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    DeviceDetectorModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

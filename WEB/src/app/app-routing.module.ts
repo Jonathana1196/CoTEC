@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'Login', component: LoginComponent},
 
   {
-    path: 'TECBoxHA', pathMatch: 'prefix',
+    path: 'CoTECadmin', pathMatch: 'prefix',
     children: [
       { path: 'RutasView', pathMatch: 'prefix', component: RutasComponent },
       { path: '', component: TecboxaComponent }

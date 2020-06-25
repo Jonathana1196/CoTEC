@@ -13,6 +13,11 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { RegionComponent } from './Administrador/region/region.component';
+import { PatologiaComponent } from './Administrador/patologia/patologia.component';
+import { HospitalComponent } from './Administrador/hospital/hospital.component';
+import { EstadoComponent } from './Administrador/estado/estado.component';
+import { MedidaSComponent } from './Administrador/medida-s/medida-s.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +29,11 @@ import { environment } from 'src/environments/environment';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    RegionComponent,
+    PatologiaComponent,
+    HospitalComponent,
+    EstadoComponent,
+    MedidaSComponent,
   ],
   imports: [
     BrowserModule,

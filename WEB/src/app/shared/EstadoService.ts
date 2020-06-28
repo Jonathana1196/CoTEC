@@ -7,7 +7,7 @@ import {environment} from '../../environments/environment';
 })
 export class EstadoService {
 
-  constructor(public http: HttpClient) { }
+  constructor(private http: HttpClient) { }
   postEstado(formData) {
     return this.http.post('http://127.0.0.1:5001/' + 'CoTEC/Estados', formData);
   }

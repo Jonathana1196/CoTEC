@@ -27,6 +27,7 @@ export class EstadoComponent implements OnInit {
           (res as []).forEach((estado: any) => {
             this.EstadosForms.push(this.fb.group({
               dataID : [1],
+              Id : [estado.id, Validators.required],
               Descripcion: [estado.descripcion]
             }));
           });

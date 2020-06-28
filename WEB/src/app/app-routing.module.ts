@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TecboxaComponent } from './Administrador/tecboxa/tecboxa.component';
-import { RutasComponent } from './Administrador/rutas/rutas.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import {EstadoComponent} from './Administrador/estado/estado.component';
 
 const routes: Routes = [
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
   {
     path: 'CoTECadmin', pathMatch: 'prefix',
     children: [
-      { path: 'RutasView', pathMatch: 'prefix', component: RutasComponent },
+      { path: 'EstadosView', pathMatch: 'prefix', component: EstadoComponent },
       { path: '', component: TecboxaComponent }
     ]
   },

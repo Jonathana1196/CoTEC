@@ -6,6 +6,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import {EstadoComponent} from './Administrador/estado/estado.component';
 import {RegionComponent} from './Administrador/region/region.component';
+import {PatologiaComponent} from "./Administrador/patologia/patologia.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,8 @@ const routes: Routes = [
     children: [
       { path: 'EstadosView', pathMatch: 'prefix', component: EstadoComponent },
       { path: 'RegionesView', pathMatch: 'prefix', component: RegionComponent},
+      { path: 'PatologiasView', pathMatch: 'prefix', component: PatologiaComponent},
+
 
       { path: '', component: TecboxaComponent }
     ]

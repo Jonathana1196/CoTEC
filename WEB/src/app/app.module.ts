@@ -4,7 +4,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { RutasComponent } from './Administrador/rutas/rutas.component';
 import { NavbaraComponent } from './Administrador/navbara/navbara.component';
 import { TecboxaComponent } from './Administrador/tecboxa/tecboxa.component';
 import { NavbarhComponent } from './home/navbarh/navbarh.component';
@@ -23,7 +22,6 @@ import { MedidaSComponent } from './Administrador/medida-s/medida-s.component';
   declarations: [
     AppComponent,
     NavbaraComponent,
-    RutasComponent,
     TecboxaComponent,
     NavbarhComponent,
     HomeComponent,

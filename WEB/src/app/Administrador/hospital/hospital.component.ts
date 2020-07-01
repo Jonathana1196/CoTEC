@@ -55,6 +55,8 @@ export class HospitalComponent implements OnInit {
     if (fg.value.dataID === 0){
       this.showNotification('insert');
       this.HospitalService.postHospital(fg.value).subscribe(
+        (res: any) => {
+        }
       );
     }
     else{
@@ -74,7 +76,6 @@ export class HospitalComponent implements OnInit {
       }
     );
   }
-
   showNotification(category){
     switch (category) {
       case 'insert':
@@ -93,6 +94,4 @@ export class HospitalComponent implements OnInit {
       this.notification = null;
     }, 3000);
   }
-
-
 }

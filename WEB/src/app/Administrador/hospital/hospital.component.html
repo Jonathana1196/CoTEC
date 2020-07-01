@@ -31,6 +31,9 @@
   </div>
   <div class="tbody">
     <form class="tr" [formGroup]="fg" *ngFor="let fg of HospitalesForms.controls; let i=index" (submit)="recordSubmit(fg)">
+      <datalist id="data">
+        <option *ngFor=" let item of RegionList" value="{{item.id}}">{{item.id}}</option>
+      </datalist>
       <div class="td">
         <input class="form-control" formControlName="Nombre">
       </div>
@@ -47,11 +50,7 @@
         <input class="form-control" type="number" formControlName="CamasUCI">
       </div>
       <div class="td">
-
-        <input class="form-control"  type="number" formControlName="Region" list="browsers" name="browser" id="browser">
-        <datalist id="browsers">
-          <option *ngFor=" let item of RegionList" value="{{item.id}}">{{item.id}}</option>
-        </datalist>
+        <input class="form-control"  formControlName="Region" list="data" type="number">
       </div>
       <div class="td">
         <button type="submit" class="btn" [ngClass]="(fg.get('dataID').value==0)?'btn-success':'btn btn-light'"><i

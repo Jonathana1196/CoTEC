@@ -29,9 +29,8 @@ export class MedidaSComponent implements OnInit {
               Id : [medida.id],
               Nombre: [medida.nombre],
               Descripcion : [medida.descripcion],
-              // tslint:disable-next-line:max-line-length
-              FechaInicio : [new Date(new Date(medida.fechaInicio).getFullYear(), new Date(medida.fechaInicio).getMonth() , new Date(medida.fechaInicio).getDate())],
-              FechaFinal : [new Date(medida.fechaFinal)],
+              FechaInicio : [new Date(medida.fechaInicio).toISOString().split('T')[0]],
+              FechaFinal : [new Date(medida.fechaFinal).toISOString().split('T')[0]],
               Region : [medida.region]
             }));
           });

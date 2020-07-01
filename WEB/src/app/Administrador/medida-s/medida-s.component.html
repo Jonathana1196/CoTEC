@@ -39,13 +39,13 @@
         <input class="form-control" formControlName="Descripcion">
       </div>
       <div class="td">
-        <input class="form-control" type="date" formControlName="FechaInicio" id="inicio">
+        <input class="form-control" type="date"  formControlName="FechaInicio" id="inicio">
       </div>
       <div class="td">
-        <input class="form-control" type="date" formControlName="FechaFinal" id="final">
+        <input class="form-control" type="date"  formControlName="FechaFinal" id="final">
       </div>
       <div class="td">
-        <input class="form-control"  formControlName="Region" list="data" type="number">
+        <input class="form-control"  formControlName="Region" list="data" type="number" >
       </div>
       <div class="td">
         <button type="submit" class="btn" [ngClass]="(fg.get('dataID').value==0)?'btn-success':'btn btn-light'"><i

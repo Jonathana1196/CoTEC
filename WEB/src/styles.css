@@ -10169,6 +10169,8 @@ header.masthead h1 {
 /* You can add global styles to this file, and also import other style files */
 
 .grid-table {
+  overflow:auto;
+  overflow-x:scroll;
   display: table;
 }
 
@@ -10182,6 +10184,8 @@ header.masthead h1 {
 
 .tbody {
   display: table-row-group;
+  overflow-x:scroll;
+  white-space: nowrap;
 }
 
 .tr {

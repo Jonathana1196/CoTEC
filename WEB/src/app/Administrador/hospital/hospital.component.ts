@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {HospitalService} from '../../shared/HospitalService';
-import { IDropdownSettings } from 'ng-multiselect-dropdown';
 
 @Component({
   selector: 'app-hospital',
@@ -10,7 +9,6 @@ import { IDropdownSettings } from 'ng-multiselect-dropdown';
 })
 
 export class HospitalComponent implements OnInit {
-  toppings = new FormControl();
   HospitalesForms: FormArray = this.fb.array([]);
   notification = null;
   RegionList = [];

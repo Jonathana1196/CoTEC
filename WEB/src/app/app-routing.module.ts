@@ -34,7 +34,7 @@ const routes: Routes = [
   {
     path: 'CoTECHospital', pathMatch: 'prefix',
     children: [
-
+      { path: 'PacientesView', pathMatch: 'prefix', component: PacienteComponent},
       { path: '', component:  CoTECHospitalComponent}
     ]
   },

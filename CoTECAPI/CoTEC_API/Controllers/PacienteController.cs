@@ -38,7 +38,7 @@ namespace CoTECAPI.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{cedula}")]
         // Metodo que se encarga de 
         public IActionResult PutPaciente([FromBody] Paciente paciente, int cedula)
         {
@@ -52,7 +52,7 @@ namespace CoTECAPI.Controllers
             return Ok();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{cedula}")]
         // Metodo que se encarga de eliminar un paciente de la base de datos.
         public IActionResult DeletePaciente(int cedula)
         {

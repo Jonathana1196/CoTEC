@@ -17,5 +17,6 @@ namespace CoTECAPI.Models
         public string UCI { get; set; }
         public int Region { get; set; }
         public int Estado { get; set; }
+        public string Internado { get; set; }
     }
 }

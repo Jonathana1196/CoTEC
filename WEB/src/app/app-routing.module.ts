@@ -2,13 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TecboxaComponent } from './Administrador/tecboxa/tecboxa.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
 import {EstadoComponent} from './Administrador/estado/estado.component';
 import {RegionComponent} from './Administrador/region/region.component';
-import {PatologiaComponent} from "./Administrador/patologia/patologia.component";
-import {HospitalComponent} from "./Administrador/hospital/hospital.component";
-import {MedidaSComponent} from "./Administrador/medida-s/medida-s.component";
+import {PatologiaComponent} from './Administrador/patologia/patologia.component';
+import {HospitalComponent} from './Administrador/hospital/hospital.component';
+import {MedidaSComponent} from './Administrador/medida-s/medida-s.component';
+
 
 const routes: Routes = [
   {
@@ -16,11 +15,6 @@ const routes: Routes = [
   },
 
   { path: 'Home', component: HomeComponent },
-
-  { path: 'Register', component: RegisterComponent},
-
-  { path: 'Login', component: LoginComponent},
-
   {
     path: 'CoTECadmin', pathMatch: 'prefix',
     children: [
@@ -29,7 +23,6 @@ const routes: Routes = [
       { path: 'PatologiasView', pathMatch: 'prefix', component: PatologiaComponent},
       { path: 'HospitalesView', pathMatch: 'prefix', component: HospitalComponent},
       { path: 'MedidasView', pathMatch: 'prefix', component: MedidaSComponent},
-
       { path: '', component: TecboxaComponent }
     ]
   },

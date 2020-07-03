@@ -8,8 +8,6 @@ import { NavbaraComponent } from './Administrador/navbara/navbara.component';
 import { TecboxaComponent } from './Administrador/tecboxa/tecboxa.component';
 import { NavbarhComponent } from './home/navbarh/navbarh.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { RegionComponent } from './Administrador/region/region.component';
@@ -17,6 +15,10 @@ import { PatologiaComponent } from './Administrador/patologia/patologia.componen
 import { HospitalComponent } from './Administrador/hospital/hospital.component';
 import { EstadoComponent } from './Administrador/estado/estado.component';
 import { MedidaSComponent } from './Administrador/medida-s/medida-s.component';
+import { MedicacionComponent } from './Administrador/medicacion/medicacion.component';
+import { PacienteComponent } from './CentroHospital/paciente/paciente.component';
+import { ContactoComponent } from './CentroHospital/contacto/contacto.component';
+import { CoTECHospitalComponent } from './CentroHospital/co-techospital/co-techospital.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +27,15 @@ import { MedidaSComponent } from './Administrador/medida-s/medida-s.component';
     TecboxaComponent,
     NavbarhComponent,
     HomeComponent,
-    LoginComponent,
-    RegisterComponent,
     RegionComponent,
     PatologiaComponent,
     HospitalComponent,
     EstadoComponent,
     MedidaSComponent,
+    MedicacionComponent,
+    PacienteComponent,
+    ContactoComponent,
+    CoTECHospitalComponent,
   ],
   imports: [
     BrowserModule,

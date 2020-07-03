@@ -50,7 +50,6 @@ namespace CoTECAPI.Controllers
             {
                 return BadRequest();
             }
-
             context.Entry(contacto).State = EntityState.Modified;
             context.SaveChanges();
             return Ok();

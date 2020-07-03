@@ -14,4 +14,5 @@ namespace CoTECAPI.Models
         public string CasaFarmaceutica { get; set; }
         public int Paciente { get; set; }
     }
+    
 }

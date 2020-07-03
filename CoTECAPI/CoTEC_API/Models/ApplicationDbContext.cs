@@ -7,7 +7,6 @@ namespace CoTECAPI.Models
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
         }
         public DbSet<Estado> ESTADO { get; set; }
         

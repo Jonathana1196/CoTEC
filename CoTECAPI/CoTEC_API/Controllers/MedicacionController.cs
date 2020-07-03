@@ -6,6 +6,7 @@ using System.Collections;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CoTECAPI.Models;
+using Microsoft.Data.SqlClient;
 
 namespace CoTECAPI.Controllers
 {
@@ -26,6 +27,15 @@ namespace CoTECAPI.Controllers
         public IEnumerable<Medicacion> GetMedicaciones()
         {
             return context.MEDICACION.ToList();
+        }
+        [HttpGet("{id}" + "/Paciente")]
+        // Metodo que se encarga de obtener las medicaciones desde un Procedure
+        // la base de datos.
+        public IEnumerable<Medicacion> GetMedicacionesPaciente(int id)
+        {
+            var idp = new SqlParameter("@idPaciente",id);
+
+            return context.MEDICACION.FromSqlRaw("GetMedicaciones4 @idPaciente", idp).ToList();
         }
 
         [HttpPost]

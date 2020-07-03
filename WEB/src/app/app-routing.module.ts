@@ -7,6 +7,7 @@ import {RegionComponent} from './Administrador/region/region.component';
 import {PatologiaComponent} from './Administrador/patologia/patologia.component';
 import {HospitalComponent} from './Administrador/hospital/hospital.component';
 import {MedidaSComponent} from './Administrador/medida-s/medida-s.component';
+import {MedicacionComponent} from "./Administrador/medicacion/medicacion.component";
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
       { path: 'PatologiasView', pathMatch: 'prefix', component: PatologiaComponent},
       { path: 'HospitalesView', pathMatch: 'prefix', component: HospitalComponent},
       { path: 'MedidasView', pathMatch: 'prefix', component: MedidaSComponent},
+      { path: 'MedicacionView', pathMatch: 'prefix', component: MedicacionComponent},
       { path: '', component: TecboxaComponent }
     ]
   },

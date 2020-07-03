@@ -7,7 +7,10 @@ import {RegionComponent} from './Administrador/region/region.component';
 import {PatologiaComponent} from './Administrador/patologia/patologia.component';
 import {HospitalComponent} from './Administrador/hospital/hospital.component';
 import {MedidaSComponent} from './Administrador/medida-s/medida-s.component';
-import {MedicacionComponent} from "./Administrador/medicacion/medicacion.component";
+import {MedicacionComponent} from './Administrador/medicacion/medicacion.component';
+import {CoTECHospitalComponent} from './CentroHospital/co-techospital/co-techospital.component'
+import {PacienteComponent} from "./CentroHospital/paciente/paciente.component";
+import {ContactoComponent} from "./CentroHospital/contacto/contacto.component";
 
 
 const routes: Routes = [
@@ -26,6 +29,13 @@ const routes: Routes = [
       { path: 'MedidasView', pathMatch: 'prefix', component: MedidaSComponent},
       { path: 'MedicacionView', pathMatch: 'prefix', component: MedicacionComponent},
       { path: '', component: TecboxaComponent }
+    ]
+  },
+  {
+    path: 'CoTECHospital', pathMatch: 'prefix',
+    children: [
+
+      { path: '', component:  CoTECHospitalComponent}
     ]
   },
 ];

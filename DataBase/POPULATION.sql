@@ -46,9 +46,10 @@ VALUES
 -- ==============================================================
 INSERT INTO PACIENTE(Cedula, Nombre, Apellido, Edad, Nacionalidad, Internado, UCI, Region, Estado)
 VALUES
+(0, 'Marco', 'Rivera', 25, 'Costarricense', 'No', 'No', 5, 2),
 (21346587, 'Abner', 'Lacayo', 25, 'Costarricense', 'Si', 'No', 5, 2),
 (98756443, 'Alejandro', 'Salazar', 26, 'Costarricense', 'No', 'No', 5, 3),
-(68548954, 'Brian', 'Lacayo', 27, 'Costarricense', 'No', 'No', 5, 1),
+(68548954, 'Brian', 'Lacayo', 27, 'Costarricense', 'No', 'No', 2, 1),
 (45897564, 'Thalia', 'Arias', 28, 'Costarricense', 'No', 'No', 5, 3);
 
 -- ==============================================================

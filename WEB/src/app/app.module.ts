@@ -19,6 +19,11 @@ import { MedicacionComponent } from './Administrador/medicacion/medicacion.compo
 import { PacienteComponent } from './CentroHospital/paciente/paciente.component';
 import { ContactoComponent } from './CentroHospital/contacto/contacto.component';
 import { CoTECHospitalComponent } from './CentroHospital/co-techospital/co-techospital.component';
+import { NavbarhosComponent } from './CentroHospital/navbarhos/navbarhos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -36,6 +41,7 @@ import { CoTECHospitalComponent } from './CentroHospital/co-techospital/co-techo
     PacienteComponent,
     ContactoComponent,
     CoTECHospitalComponent,
+    NavbarhosComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,11 @@ import { CoTECHospitalComponent } from './CentroHospital/co-techospital/co-techo
     HttpClientModule,
     AppRoutingModule,
     AngularFireModule,
+    NgMultiSelectDropDownModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

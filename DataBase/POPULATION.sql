@@ -44,13 +44,13 @@ VALUES
 -- @INT:
 -- @INT:
 -- ==============================================================
-INSERT INTO PACIENTE(Cedula, Nombre, Apellido, Edad, Nacionalidad, Internado, UCI, Region, Estado)
+INSERT INTO PACIENTE(Cedula, Nombre, Apellido, Edad, Nacionalidad, Internado, UCI, Region, Estado, FechaIngreso)
 VALUES
-(0, 'Marco', 'Rivera', 25, 'Costarricense', 'No', 'No', 5, 2),
-(21346587, 'Abner', 'Lacayo', 25, 'Costarricense', 'Si', 'No', 5, 2),
-(98756443, 'Alejandro', 'Salazar', 26, 'Costarricense', 'No', 'No', 5, 3),
-(68548954, 'Brian', 'Lacayo', 27, 'Costarricense', 'No', 'No', 2, 1),
-(45897564, 'Thalia', 'Arias', 28, 'Costarricense', 'No', 'No', 5, 3);
+(0, 'Marco', 'Rivera', 25, 'Costarricense', 'No', 'No', 5, 2,'2020-05-12'),
+(21346587, 'Abner', 'Lacayo', 25, 'Costarricense', 'Si', 'No', 5, 2,'2020-03-08'),
+(98756443, 'Alejandro', 'Salazar', 26, 'Costarricense', 'No', 'No', 5, 3,'2020-05-05'),
+(68548954, 'Brian', 'Lacayo', 27, 'Costarricense', 'No', 'No', 2, 1,'2020-01-08'),
+(45897564, 'Thalia', 'Arias', 28, 'Costarricense', 'No', 'No', 5, 3,'2020-06-08');
 
 -- ==============================================================
 -- Descripcion: Poblacion de la tabla CONTACTO que recibe:

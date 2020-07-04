@@ -15,7 +15,7 @@ SELECT Id, Nombre, CasaFarmaceutica, Paciente
 FROM MEDICACION
 WHERE Paciente = @idPaciente;
 -- ==============================================================
-exec GetMedicaciones 68548954
+EXEC GetMedicaciones 68548954
 -- ==============================================================
 -- ==============================================================
 GO
@@ -33,25 +33,17 @@ SELECT Id, Nombre, Descripcion, Sintomas, Tratamiento, Paciente
 FROM PATOLOGIA
 WHERE Paciente = @idPaciente;
 -- ==============================================================
-exec GetPatologiasP 21346587
+EXEC GetPatologiasP 21346587
 -- ==============================================================
 GO
 
 -- ==============================================================
 -- Tipo: Proceso.
--- Descripcion: Obtiene el acumulado de personas confirmados 
--- contagiadas, recuperadas, muertas o activas a nivel mundial.
--- Entradas: N/A
--- Salidas: N/A
+-- Descripcion:
+-- Entradas:
+-- Salidas:
 -- ==============================================================
-CREATE PROCEDURE GetAcumuladoGlobal(@estadoConsultado INT)
-AS
-SELECT 
-   COUNT(*)
-FROM 
-    PACIENTE
-WHERE 
-    PACIENTE_ESTADO_FK = @estadoConsultado;
+
 -- ==============================================================
 
 -- ==============================================================
@@ -59,19 +51,11 @@ GO
 
 -- ==============================================================
 -- Tipo: Proceso.
--- Descripcion: Obtiene el detalle del incremento diario a nivel 
--- mundial.
--- Entradas: N/A
--- Salidas: N/A
+-- Descripcion:
+-- Entradas:
+-- Salidas:
 -- ==============================================================
-CREATE PROCEDURE GetActivosGlobal()
-AS
-SELECT 
-   COUNT(*)
-FROM 
-    PACIENTE
-WHERE 
-    PACIENTE_ESTADO_FK = 1;
+
 -- ==============================================================
 
 -- ==============================================================
@@ -79,21 +63,11 @@ GO
 
 -- ==============================================================
 -- Tipo: Proceso.
--- Descripcion: Obtiene el acumulado de personas confirmados 
--- contagiadas, recuperadas, muertas o activas para un país en 
--- específico.
--- Entradas: País 
--- Salidas: N/A
+-- Descripcion:
+-- Entradas: 
+-- Salidas:
 -- ==============================================================
-CREATE PROCEDURE GetAcumuladoPais(@estadoConsultado INT, @pais INT)
-AS
-SELECT 
-   COUNT(*)
-FROM 
-    PACIENTE
-WHERE 
-    Region = @pais and
-    PACIENTE_ESTADO_FK = @estadoConsultado;
+
 -- ==============================================================
 
 -- ==============================================================
@@ -101,20 +75,11 @@ GO
 
 -- ==============================================================
 -- Tipo: Proceso.
--- Descripcion: Obtiene el detalle del incremento diario a nivel 
--- mundial.
--- Entradas: N/A
--- Salidas: N/A
+-- Descripcion:
+-- Entradas:
+-- Salidas:
 -- ==============================================================
-CREATE PROCEDURE GetActivosPais(@pais INT)
-AS
-SELECT 
-   COUNT(*)
-FROM 
-    PACIENTE
-WHERE 
-    Region = @pais and
-    PACIENTE_ESTADO_FK = 1;
+
 -- ==============================================================
 
 -- ==============================================================

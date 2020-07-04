@@ -14,6 +14,7 @@ export class ContactoComponent implements OnInit {
   PacienteList = [];
   PatologiasList = [];
 
+  // tslint:disable-next-line:no-shadowed-variable
   constructor(private fb: FormBuilder, private ContactoService: ContactoService) { }
 
   ngOnInit(): void {

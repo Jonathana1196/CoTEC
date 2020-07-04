@@ -24,6 +24,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import { NavbargeneralComponent } from './PaginaGeneral/navbargeneral/navbargeneral.component';
+import { PagGeneralComponent } from './PaginaGeneral/pag-general/pag-general.component';
+import { VistaCasosComponent } from './PaginaGeneral/vista-casos/vista-casos.component';
+import { VistaCasosPaisComponent } from './PaginaGeneral/vista-casos-pais/vista-casos-pais.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,10 @@ import {MatSelectModule} from '@angular/material/select';
     ContactoComponent,
     CoTECHospitalComponent,
     NavbarhosComponent,
+    NavbargeneralComponent,
+    PagGeneralComponent,
+    VistaCasosComponent,
+    VistaCasosPaisComponent,
   ],
   imports: [
     BrowserModule,

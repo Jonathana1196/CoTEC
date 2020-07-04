@@ -6,6 +6,8 @@ using System.Collections;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CoTECAPI.Models;
+using Microsoft.Data.SqlClient;
+
 namespace CoTECAPI.Controllers
 {
     [Produces("application/json")]
@@ -25,6 +27,55 @@ namespace CoTECAPI.Controllers
         {
             return context.PACIENTE.ToList();
         }
+        [HttpGet("Activos")]
+        // Metodo que se encarga de obtener las medicaciones desde un Procedure
+        // la base de datos.
+        public IEnumerable GetACTIVOS()
+        {
+            return context.result.FromSqlRaw("EXEC COUNTACTIVOS").ToList();
+        }
+        [HttpGet("Recuperados")]
+        // Metodo que se encarga de obtener las medicaciones desde un Procedure
+        // la base de datos.
+        public IEnumerable GetRECUPERADOS()
+        {
+            return context.result.FromSqlRaw("EXEC COUNTRECUPERADOS").ToList();
+        }
+        [HttpGet("Muertos")]
+        // Metodo que se encarga de obtener las medicaciones desde un Procedure
+        // la base de datos.
+        public IEnumerable GetMUERTOS()
+        {
+            return context.result.FromSqlRaw("EXEC COUNTMUERTOS").ToList();
+        }
+        [HttpGet("Activos" + "/{pais}")]
+        // Metodo que se encarga de obtener las medicaciones desde un Procedure
+        // la base de datos.
+        public IQueryable<result> GetActivosPais(string pais)
+        {
+            var idp = new SqlParameter("@idpais",pais);
+
+            return context.result.FromSqlRaw("COUNTACTIVOSPAIS @idpais", idp);
+        }
+        [HttpGet("Recuperados" + "/{pais}")]
+        // Metodo que se encarga de obtener las medicaciones desde un Procedure
+        // la base de datos.
+        public IQueryable<result> GetRecuperadosPais(string pais)
+        {
+            var idp = new SqlParameter("@idpais",pais);
+
+            return context.result.FromSqlRaw("COUNTRECUPERADOSPAIS @idpais", idp);
+        }
+        [HttpGet("Muertos" + "/{pais}")]
+        // Metodo que se encarga de obtener las medicaciones desde un Procedure
+        // la base de datos.
+        public IQueryable<result> GetMuertosPais(string pais)
+        {
+            var idp = new SqlParameter("@idpais",pais);
+
+            return context.result.FromSqlRaw("COUNTMUERTOSPAIS @idpais", idp);
+        }
+
 
         [HttpPost]
         // Metodo que se encarga publicar un paciente en la base de datos.

@@ -11,6 +11,9 @@ import {MedicacionComponent} from './Administrador/medicacion/medicacion.compone
 import {CoTECHospitalComponent} from './CentroHospital/co-techospital/co-techospital.component'
 import {PacienteComponent} from "./CentroHospital/paciente/paciente.component";
 import {ContactoComponent} from "./CentroHospital/contacto/contacto.component";
+import {VistaCasosComponent} from "./PaginaGeneral/vista-casos/vista-casos.component";
+import {VistaCasosPaisComponent} from "./PaginaGeneral/vista-casos-pais/vista-casos-pais.component";
+import {PagGeneralComponent} from "./PaginaGeneral/pag-general/pag-general.component";
 
 
 const routes: Routes = [
@@ -37,6 +40,14 @@ const routes: Routes = [
       { path: 'PacientesView', pathMatch: 'prefix', component: PacienteComponent},
       { path: 'ContactosView', pathMatch: 'prefix', component: ContactoComponent},
       { path: '', component:  CoTECHospitalComponent}
+    ]
+  },
+  {
+    path: 'CoTECGeneral', pathMatch: 'prefix',
+    children: [
+      { path: 'CasosView', pathMatch: 'prefix', component: VistaCasosComponent},
+      { path: 'CasosPaisView', pathMatch: 'prefix', component: VistaCasosPaisComponent},
+      { path: '', component:  PagGeneralComponent}
     ]
   },
 ];

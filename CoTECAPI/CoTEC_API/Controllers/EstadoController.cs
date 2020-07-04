@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CoTECAPI.Models;
+using Microsoft.Data.SqlClient;
 
 namespace CoTECAPI.Controllers
 {
@@ -32,7 +33,6 @@ namespace CoTECAPI.Controllers
             }
             return BadRequest(ModelState);
         }
-        
         [HttpPut("{id}")]
         public  IActionResult PutEstado([FromBody]Estado estado, int id)
         {

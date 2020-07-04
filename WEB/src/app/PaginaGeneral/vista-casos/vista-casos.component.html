@@ -1,0 +1,39 @@
+<app-navbargeneral></app-navbargeneral>
+
+<blockquote class="blockquote ml-5">
+  <h2>Casos Confirmados</h2>
+  <footer class="blockquote-footer">
+    CoTEC
+  </footer>
+</blockquote>
+
+
+<div class="grid-table">
+
+  <div class="thead">
+    <div class="tr">
+      <div class="td">Contagiados</div>
+      <div class="td">Activos</div>
+      <div class="td">Recuperados</div>
+      <div class="td">Muertos</div>
+      <div class="td">
+      </div>
+    </div>
+  </div>
+  <div class="tbody">
+    <form class="tr" [formGroup]="fg" *ngFor="let fg of casos.controls">
+      <div class="td">
+        <input *ngFor=" let item of activos" value="{{item.result}}" [readonly]="true">
+      </div>
+      <div class="td">
+        <input *ngFor=" let item of activos" value="{{item.result}}" [readonly]="true">
+      </div>
+      <div class="td">
+      <input *ngFor=" let item of recuperados" value="{{item.result}}" [readonly]="true">
+    </div>
+      <div class="td">
+        <input *ngFor=" let item of muertos" value="{{item.result}}" [readonly]="true">
+      </div>
+    </form>
+  </div>
+</div>

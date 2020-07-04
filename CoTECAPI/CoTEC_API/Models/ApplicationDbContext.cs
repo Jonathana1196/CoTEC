@@ -9,6 +9,8 @@ namespace CoTECAPI.Models
         {
         }
         public DbSet<Estado> ESTADO { get; set; }
+        public DbSet<result> result { get; set; }
+
         
         public DbSet<Hospital> HOSPITAL { get; set; }
         public DbSet<Medicacion> MEDICACION { get; set; }

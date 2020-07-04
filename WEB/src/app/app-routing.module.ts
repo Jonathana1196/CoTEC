@@ -12,6 +12,7 @@ import { CoTECHospitalComponent } from './CentroHospital/co-techospital/co-techo
 import { PacienteComponent } from "./CentroHospital/paciente/paciente.component";
 import { ContactoComponent } from "./CentroHospital/contacto/contacto.component";
 import { AcumuladoComponent } from "./General/acumulado/acumulado.component";
+import { MedidasctComponent } from "./General/medidasct/medidasct.component";
 
 
 const routes: Routes = [
@@ -24,27 +25,28 @@ const routes: Routes = [
     path: 'CoTECadmin', pathMatch: 'prefix',
     children: [
       { path: 'EstadosView', pathMatch: 'prefix', component: EstadoComponent },
-      { path: 'RegionesView', pathMatch: 'prefix', component: RegionComponent},
-      { path: 'PatologiasView', pathMatch: 'prefix', component: PatologiaComponent},
-      { path: 'HospitalesView', pathMatch: 'prefix', component: HospitalComponent},
-      { path: 'MedidasView', pathMatch: 'prefix', component: MedidaSComponent},
-      { path: 'MedicacionView', pathMatch: 'prefix', component: MedicacionComponent},
+      { path: 'RegionesView', pathMatch: 'prefix', component: RegionComponent },
+      { path: 'PatologiasView', pathMatch: 'prefix', component: PatologiaComponent },
+      { path: 'HospitalesView', pathMatch: 'prefix', component: HospitalComponent },
+      { path: 'MedidasView', pathMatch: 'prefix', component: MedidaSComponent },
+      { path: 'MedicacionView', pathMatch: 'prefix', component: MedicacionComponent },
       { path: '', component: TecboxaComponent }
     ]
   },
   {
     path: 'CoTECHospital', pathMatch: 'prefix',
     children: [
-      { path: 'PacientesView', pathMatch: 'prefix', component: PacienteComponent},
-      { path: 'ContactosView', pathMatch: 'prefix', component: ContactoComponent},
-      { path: '', component:  CoTECHospitalComponent}
+      { path: 'PacientesView', pathMatch: 'prefix', component: PacienteComponent },
+      { path: 'ContactosView', pathMatch: 'prefix', component: ContactoComponent },
+      { path: '', component:  CoTECHospitalComponent }
     ]
   },
   {
     path: 'CoTECGeneral', pathMatch: 'prefix',
     children: [
-      { path: 'CasosAcumuladosView', pathMatch: 'prefix', component: AcumuladoComponent},
-      { path: '', component:  CoTECHospitalComponent}
+      { path: 'CasosAcumuladosView', pathMatch: 'prefix', component: AcumuladoComponent },
+      { path: 'MedidasConcencionTomadasView', pathMatch: 'prefix', component: MedidasctComponent },
+      { path: '', component:  CoTECHospitalComponent }
     ]
   }
 ];

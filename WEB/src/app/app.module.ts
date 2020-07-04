@@ -25,6 +25,7 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { AcumuladoComponent } from './General/acumulado/acumulado.component';
+import { MedidasctComponent } from './General/medidasct/medidasct.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { AcumuladoComponent } from './General/acumulado/acumulado.component';
     CoTECHospitalComponent,
     NavbarhosComponent,
     AcumuladoComponent,
+    MedidasctComponent,
   ],
   imports: [
     BrowserModule,

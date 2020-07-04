@@ -42,7 +42,7 @@ namespace CoTECAPI.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{cedula}")]
         // Metodo que se encarga de 
         public IActionResult PutContacto([FromBody] Contacto contacto, int cedula)
         {
@@ -55,7 +55,7 @@ namespace CoTECAPI.Controllers
             return Ok();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{cedula}")]
         // Metodo que se encarga de eliminar un contacto de la base de datos.
         public IActionResult DeleteContacto(int cedula)
         {

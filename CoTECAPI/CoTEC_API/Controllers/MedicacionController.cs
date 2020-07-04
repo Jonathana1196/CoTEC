@@ -35,7 +35,7 @@ namespace CoTECAPI.Controllers
         {
             var idp = new SqlParameter("@idPaciente",id);
 
-            return context.MEDICACION.FromSqlRaw("GetMedicaciones4 @idPaciente", idp).ToList();
+            return context.MEDICACION.FromSqlRaw("GetMedicaciones @idPaciente", idp).ToList();
         }
 
         [HttpPost]

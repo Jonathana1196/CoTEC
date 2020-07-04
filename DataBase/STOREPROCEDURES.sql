@@ -15,7 +15,7 @@ SELECT Id, Nombre, CasaFarmaceutica, Paciente
 FROM MEDICACION
 WHERE Paciente = @idPaciente;
 -- ==============================================================
-EXEC GetMedicaciones 68548954
+exec GetMedicaciones 68548954
 -- ==============================================================
 -- ==============================================================
 GO
@@ -33,53 +33,39 @@ SELECT Id, Nombre, Descripcion, Sintomas, Tratamiento, Paciente
 FROM PATOLOGIA
 WHERE Paciente = @idPaciente;
 -- ==============================================================
-EXEC GetPatologiasP 21346587
+exec GetPatologiasP 21346587
 -- ==============================================================
 GO
 
--- ==============================================================
--- Tipo: Proceso.
--- Descripcion:
--- Entradas:
--- Salidas:
--- ==============================================================
-
--- ==============================================================
-
--- ==============================================================
+CREATE PROCEDURE COUNTACTIVOS
+AS
+SELECT COUNT(PACIENTE.Estado) as RESULT FROM PACIENTE WHERE PACIENTE.Estado=1
 GO
 
--- ==============================================================
--- Tipo: Proceso.
--- Descripcion:
--- Entradas:
--- Salidas:
--- ==============================================================
-
--- ==============================================================
-
--- ==============================================================
+CREATE PROCEDURE COUNTRECUPERADOS
+AS
+SELECT COUNT(PACIENTE.Estado) as RESULT FROM PACIENTE WHERE PACIENTE.Estado=2
 GO
 
--- ==============================================================
--- Tipo: Proceso.
--- Descripcion:
--- Entradas: 
--- Salidas:
--- ==============================================================
-
--- ==============================================================
-
--- ==============================================================
+CREATE PROCEDURE COUNTMUERTOS
+AS
+SELECT COUNT(PACIENTE.Estado) as RESULT FROM PACIENTE WHERE PACIENTE.Estado=3
 GO
 
--- ==============================================================
--- Tipo: Proceso.
--- Descripcion:
--- Entradas:
--- Salidas:
--- ==============================================================
+CREATE PROCEDURE COUNTACTIVOSPAIS(@Pais VARCHAR(20))
+AS
+SELECT COUNT(PACIENTE.Estado) as RESULT FROM PACIENTE INNER JOIN REGION ON PACIENTE.Region=REGION.Id
+WHERE PACIENTE.Estado=1 AND Pais=@Pais
+GO
 
--- ==============================================================
+CREATE PROCEDURE COUNTRECUPERADOSPAIS(@Pais VARCHAR(20))
+AS
+SELECT COUNT(PACIENTE.Estado) as RESULT FROM PACIENTE INNER JOIN REGION ON PACIENTE.Region=REGION.Id
+WHERE PACIENTE.Estado=2 AND Pais=@Pais
+GO
 
--- ==============================================================
+CREATE PROCEDURE COUNTMUERTOSPAIS(@Pais VARCHAR(20))
+AS
+SELECT COUNT(PACIENTE.Estado) as RESULT FROM PACIENTE INNER JOIN REGION ON PACIENTE.Region=REGION.Id
+WHERE PACIENTE.Estado=3 AND Pais=@Pais
+GO

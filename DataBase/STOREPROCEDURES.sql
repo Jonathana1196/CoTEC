@@ -39,23 +39,19 @@ GO
 
 -- ==============================================================
 -- Tipo: Proceso.
--- Descripcion:
--- Entradas:
--- Salidas:
+-- Descripcion: Obtiene el acumulado de personas confirmados 
+-- contagiadas, recuperadas, muertas o activas a nivel mundial.
+-- Entradas: N/A
+-- Salidas: N/A
 -- ==============================================================
-
--- ==============================================================
-
--- ==============================================================
-GO
-
--- ==============================================================
--- Tipo: Proceso.
--- Descripcion:
--- Entradas:
--- Salidas:
--- ==============================================================
-
+CREATE PROCEDURE GetAcumuladoGlobal(@estadoConsultado INT)
+AS
+SELECT 
+   COUNT(*)
+FROM 
+    PACIENTE
+WHERE 
+    PACIENTE_ESTADO_FK = @estadoConsultado;
 -- ==============================================================
 
 -- ==============================================================
@@ -63,11 +59,62 @@ GO
 
 -- ==============================================================
 -- Tipo: Proceso.
--- Descripcion:
--- Entradas:
--- Salidas:
+-- Descripcion: Obtiene el detalle del incremento diario a nivel 
+-- mundial.
+-- Entradas: N/A
+-- Salidas: N/A
+-- ==============================================================
+CREATE PROCEDURE GetActivosGlobal()
+AS
+SELECT 
+   COUNT(*)
+FROM 
+    PACIENTE
+WHERE 
+    PACIENTE_ESTADO_FK = 1;
 -- ==============================================================
 
+-- ==============================================================
+GO
+
+-- ==============================================================
+-- Tipo: Proceso.
+-- Descripcion: Obtiene el acumulado de personas confirmados 
+-- contagiadas, recuperadas, muertas o activas para un país en 
+-- específico.
+-- Entradas: País 
+-- Salidas: N/A
+-- ==============================================================
+CREATE PROCEDURE GetAcumuladoPais(@estadoConsultado INT, @pais INT)
+AS
+SELECT 
+   COUNT(*)
+FROM 
+    PACIENTE
+WHERE 
+    Region = @pais and
+    PACIENTE_ESTADO_FK = @estadoConsultado;
+-- ==============================================================
+
+-- ==============================================================
+GO
+
+-- ==============================================================
+-- Tipo: Proceso.
+-- Descripcion: Obtiene el detalle del incremento diario a nivel 
+-- mundial.
+-- Entradas: N/A
+-- Salidas: N/A
+-- ==============================================================
+CREATE PROCEDURE GetActivosPais(@pais INT)
+AS
+SELECT 
+   COUNT(*)
+FROM 
+    PACIENTE
+WHERE 
+    Region = @pais and
+    PACIENTE_ESTADO_FK = 1;
 -- ==============================================================
 
 -- ==============================================================
